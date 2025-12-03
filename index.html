@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmasora 2025 | Flyer Designing Competition</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3a20 0%, #2d5016 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism countdown boxes */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            transition: all 0.3s ease;
+        }
+
+        .glass-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.5);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Animated gradient background */
+        .hero-gradient {
+            background: linear-gradient(135deg,
+                    #1a472a 0%,
+                    #2d5016 25%,
+                    #c41e3a 50%,
+                    #8b0000 75%,
+                    #165b33 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Snow particles */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            z-index: 50;
+            user-select: none;
+            pointer-events: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1em;
+            animation-name: fall;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Pulse animation for countdown */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Glowing text effect */
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 60px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-15px) rotate(-2deg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #c41e3a 0%, #165b33 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Button glow effect */
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(196, 30, 58, 0.6),
+                0 0 40px rgba(196, 30, 58, 0.4),
+                0 0 60px rgba(196, 30, 58, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(196, 30, 58, 0.8),
+                0 0 60px rgba(196, 30, 58, 0.6),
+                0 0 90px rgba(196, 30, 58, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Logo styling */
+        .logo-image {
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Snow Container -->
+    <div id="snow-container"></div>
+
+    <!-- Hero Section -->
+    <section
+        class="hero-gradient relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 overflow-hidden">
+        <img src="xmasora.png" alt="Xmasora 2025" class="logo-image mb-8" data-aos="fade-down" data-aos-duration="1200">
+
+        <p class="text-xl md:text-3xl text-white mb-4 font-light" data-aos="fade-up" data-aos-delay="200">
+            Inter-University Flyer Designing Competition
+        </p>
+        <p class="text-lg md:text-xl text-white/90 mb-12 font-light" data-aos="fade-up" data-aos-delay="300">
+            Unleash your festive creativity! 🎄🎨
+        </p>
+
+        <!-- Countdown Timer with Glass Boxes -->
+        <div class="mb-8" data-aos="zoom-in" data-aos-delay="400">
+            <p class="text-white text-lg md:text-xl mb-6 font-light tracking-wide">Submission Deadline</p>
+            <div id="countdown" class="flex flex-wrap justify-center gap-4 md:gap-6"></div>
+        </div>
+
+        <!-- Register Button -->
+        <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank"
+            class="px-10 py-5 bg-gradient-to-r from-red-600 to-green-700 text-white rounded-full text-xl font-bold btn-glow"
+            data-aos="fade-up" data-aos-delay="600">
+            🎨 Register Now
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 px-6 md:px-20 bg-white text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-10 left-10 text-9xl">🎄</div>
+            <div class="absolute bottom-10 right-10 text-9xl">🎁</div>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-bold gradient-text mb-8" data-aos="fade-up">About the Event</h2>
+        <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up"
+            data-aos-delay="200">
+            Xmasora 2025 is an inter-university flyer designing competition organized by the <span
+                class="font-semibold text-red-700">Rotaract Club of Sabaragamuwa University of Sri Lanka</span>.
+            Showcase your creativity, bring your festive ideas to life, and win exciting prizes! 🌟
+        </p>
+    </section>
+
+    <!-- Eligibility / Guidelines Section -->
+    <section class="py-24 px-6 md:px-20 bg-gradient-to-br from-red-50 via-green-50 to-red-50 text-center">
+        <h2 class="text-5xl md:text-6xl font-bold gradient-text mb-16" data-aos="fade-up">Eligibility / Guidelines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-red-500/20 to-green-600/20" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="text-5xl mb-4">🎓</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Eligibility</h3>
+                <p class="text-gray-700 text-lg">Open for all universities</p>
+            </div>
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-green-500/20 to-red-600/20" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="text-5xl mb-4">📄</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">File Formats</h3>
+                <p class="text-gray-700 text-lg">PDF (final)<br>Source (AI/PSD/FIG/CDR)</p>
+            </div>
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-red-500/20 to-green-600/20" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="text-5xl mb-4">✅</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Submission Limit</h3>
+                <p class="text-gray-700 text-lg">Max 1 submission per participant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-24 px-6 md:px-20 bg-white text-center">
+        <h2 class="text-5xl md:text-6xl font-bold gradient-text mb-16" data-aos="fade-up">Timeline</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-red-500/20 to-green-600/20" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="text-5xl mb-4">📝</div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-3">Submission</h3>
+                <p class="text-gray-700 text-lg">Now – 17th December 2025</p>
+            </div>
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-green-500/20 to-red-600/20" data-aos="fade-up"
+                data-aos-delay="200">
+                <div class="text-5xl mb-4">🗳️</div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-3">Voting</h3>
+                <p class="text-gray-700 text-lg">17th – 24th December 2025</p>
+            </div>
+            <div class="glass-box p-10 card-hover bg-gradient-to-br from-red-500/20 to-green-600/20" data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="text-5xl mb-4">🏆</div>
+                <h3 class="text-3xl font-bold text-gray-800 mb-3">Results</h3>
+                <p class="text-gray-700 text-lg">After 24th December 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section class="py-24 px-6 md:px-20 bg-gradient-to-br from-red-50 via-green-50 to-red-50 text-center">
+        <h2 class="text-5xl md:text-6xl font-bold gradient-text mb-16" data-aos="fade-up">Exciting Prizes</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
+            <div class="glass-box p-12 card-hover bg-gradient-to-br from-yellow-400/30 to-yellow-600/30"
+                data-aos="zoom-in" data-aos-delay="100">
+                <p class="text-7xl mb-4">🥇</p>
+                <h3 class="text-4xl font-extrabold text-yellow-600 mt-4">LKR 3,000</h3>
+                <p class="text-gray-600 mt-2 text-lg">First Place</p>
+            </div>
+            <div class="glass-box p-12 card-hover bg-gradient-to-br from-gray-300/30 to-gray-500/30" data-aos="zoom-in"
+                data-aos-delay="200">
+                <p class="text-7xl mb-4">🥈</p>
+                <h3 class="text-4xl font-extrabold text-gray-600 mt-4">LKR 2,000</h3>
+                <p class="text-gray-600 mt-2 text-lg">Second Place</p>
+            </div>
+            <div class="glass-box p-12 card-hover bg-gradient-to-br from-orange-400/30 to-orange-600/30"
+                data-aos="zoom-in" data-aos-delay="300">
+                <p class="text-7xl mb-4">🥉</p>
+                <h3 class="text-4xl font-extrabold text-orange-600 mt-4">LKR 1,000</h3>
+                <p class="text-gray-600 mt-2 text-lg">Third Place</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-red-700 to-green-800 text-white py-12 text-center">
+        <p class="text-xl font-semibold">Organized by Rotaract Club – Sabaragamuwa University of Sri Lanka</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: false });
+
+        // Countdown Timer with Glass Boxes
+        const countdown = document.getElementById("countdown");
+        const eventDate = new Date("December 17, 2025 23:59:59").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                clearInterval(timer);
+                countdown.innerHTML = `
+                    <div class="glass-box px-8 py-6 pulse-animation">
+                        <p class="text-2xl md:text-3xl font-bold text-white">🎉 Submission Closed! Voting Started! 🗳️</p>
+                    </div>
+                `;
+            } else {
+                countdown.innerHTML = `
+                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
+                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${days}</div>
+                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Days</div>
+                    </div>
+                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
+                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${hours}</div>
+                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Hours</div>
+                    </div>
+                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
+                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${minutes}</div>
+                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Minutes</div>
+                    </div>
+                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px] pulse-animation">
+                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${seconds}</div>
+                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Seconds</div>
+                    </div>
+                `;
+            }
+        }, 1000);
+
+        // Enhanced Snowfall effect - falls from top but appears distributed on load
+        const snowContainer = document.getElementById("snow-container");
+        for (let i = 0; i < 80; i++) {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.style.left = Math.random() * 100 + "vw";
+            const duration = 5 + Math.random() * 10;
+            snowflake.style.animationDuration = duration + "s";
+            // Negative delay makes snowflakes start at different points in their animation
+            snowflake.style.animationDelay = -(Math.random() * duration) + "s";
+            snowflake.style.fontSize = 10 + Math.random() * 25 + "px";
+            snowflake.innerHTML = "❄";
+            snowContainer.appendChild(snowflake);
+        }
+    </script>
+</body>
+
+</html>
