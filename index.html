@@ -191,25 +191,28 @@
 
     <!-- Hero Section -->
     <section
-        class="hero-gradient relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 overflow-hidden">
-        <img src="xmasora.png" alt="Xmasora 2025" class="logo-image mb-8" data-aos="fade-down" data-aos-duration="1200">
+        class="hero-gradient relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 md:py-20 overflow-hidden">
+        <img src="xmasora.png" alt="Xmasora 2025" class="logo-image mb-6 md:mb-8" data-aos="fade-down"
+            data-aos-duration="1200">
 
-        <p class="text-xl md:text-3xl text-white mb-4 font-light" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-lg md:text-3xl text-white mb-3 md:mb-4 font-light px-2" data-aos="fade-up" data-aos-delay="200">
             Inter-University Flyer Designing Competition
         </p>
-        <p class="text-lg md:text-xl text-white/90 mb-12 font-light" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-base md:text-xl text-white/90 mb-8 md:mb-12 font-light px-2" data-aos="fade-up"
+            data-aos-delay="300">
             Unleash your festive creativity! 🎄🎨
         </p>
 
         <!-- Countdown Timer with Glass Boxes -->
-        <div class="mb-8" data-aos="zoom-in" data-aos-delay="400">
-            <p class="text-white text-lg md:text-xl mb-6 font-light tracking-wide">Submission Deadline</p>
-            <div id="countdown" class="flex flex-wrap justify-center gap-4 md:gap-6"></div>
+        <div class="mb-6 md:mb-8 px-2 w-full max-w-md md:max-w-none" data-aos="zoom-in" data-aos-delay="400">
+            <p class="text-white text-xl md:text-3xl mb-4 md:mb-6 font-bold tracking-wide glow-text">Submission Deadline
+            </p>
+            <div id="countdown" class="flex flex-nowrap justify-center gap-2 md:gap-6"></div>
         </div>
 
         <!-- Register Button -->
         <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank"
-            class="px-10 py-5 bg-gradient-to-r from-red-600 to-green-700 text-white rounded-full text-xl font-bold btn-glow"
+            class="px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-red-600 to-green-700 text-white rounded-full text-lg md:text-xl font-bold btn-glow"
             data-aos="fade-up" data-aos-delay="600">
             🎨 Register Now
         </a>
@@ -337,35 +340,37 @@
                 `;
             } else {
                 countdown.innerHTML = `
-                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
-                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${days}</div>
-                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Days</div>
+                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
+                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${days}</div>
+                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Days</div>
                     </div>
-                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
-                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${hours}</div>
-                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Hours</div>
+                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
+                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${hours}</div>
+                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Hours</div>
                     </div>
-                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px]">
-                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${minutes}</div>
-                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Minutes</div>
+                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
+                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${minutes}</div>
+                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Mins</div>
                     </div>
-                    <div class="glass-box px-6 py-8 md:px-8 md:py-10 min-w-[100px] md:min-w-[140px] pulse-animation">
-                        <div class="text-4xl md:text-6xl font-extrabold text-white mb-2">${seconds}</div>
-                        <div class="text-sm md:text-base text-white/80 uppercase tracking-wider">Seconds</div>
+                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px] pulse-animation">
+                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${seconds}</div>
+                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Secs</div>
                     </div>
                 `;
             }
         }, 1000);
 
-        // Enhanced Snowfall effect - falls from top but appears distributed on load
+        // Enhanced Snowfall effect - 20 on mobile, 40 on desktop
         const snowContainer = document.getElementById("snow-container");
-        for (let i = 0; i < 80; i++) {
+        const isMobile = window.innerWidth < 768;
+        const snowCount = isMobile ? 20 : 40;
+
+        for (let i = 0; i < snowCount; i++) {
             const snowflake = document.createElement("div");
             snowflake.classList.add("snowflake");
             snowflake.style.left = Math.random() * 100 + "vw";
             const duration = 5 + Math.random() * 10;
             snowflake.style.animationDuration = duration + "s";
-            // Negative delay makes snowflakes start at different points in their animation
             snowflake.style.animationDelay = -(Math.random() * duration) + "s";
             snowflake.style.fontSize = 10 + Math.random() * 25 + "px";
             snowflake.innerHTML = "❄";
