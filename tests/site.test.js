@@ -14,7 +14,7 @@ test("provides basic document metadata", () => {
 test("clearly identifies the archived event as concluded", () => {
   assert.match(html, /Xmasora 2025 has concluded/);
   assert.match(html, /submitButton\.remove\(\)/);
-  assert.match(html, /December 17, 2025/);
+  assert.match(html, /17th December 2025/);
 });
 
 test("external links opened in a new tab use safe rel attributes", () => {
