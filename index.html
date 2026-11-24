@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xmasora 2025 | Flyer Designing Competition</title>
+    <meta name="description" content="Xmasora 2025, the inter-university flyer designing competition organized by the Rotaract Club of Sabaragamuwa University of Sri Lanka." />
+    <meta name="theme-color" content="#0f172a" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -173,6 +175,15 @@
             animation: logoFloat 3s ease-in-out infinite;
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
         @keyframes logoFloat {
 
             0%,
@@ -214,11 +225,11 @@
         <!-- Action Buttons -->
         <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center" data-aos="fade-up"
             data-aos-delay="600">
-            <a href="https://drive.google.com/uc?export=download&id=1kq9kqI2VxmQGM0cCoCEln9q4HTCcVz06" target="_blank"
+            <a href="https://drive.google.com/uc?export=download&id=1kq9kqI2VxmQGM0cCoCEln9q4HTCcVz06" target="_blank" rel="noopener noreferrer"
                 class="px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-red-600 to-red-900 text-white rounded-full text-lg md:text-xl font-bold btn-glow  transition-all">
                 <i class="fa-solid fa-download"></i> Guideline Book
             </a>
-            <a id="submit-button" href="https://forms.gle/Tw4vL9aTY4gsfPJNA" target="_blank"
+            <a id="submit-button" href="https://forms.gle/Tw4vL9aTY4gsfPJNA" target="_blank" rel="noopener noreferrer"
                 class="px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-blue-900 to-blue-950 text-white rounded-full text-lg md:text-xl font-bold btn-glow">
                 🎨 Submit Now
             </a>
@@ -354,7 +365,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Sathira</h3>
                     <p class="text-gray-600 text-sm mb-4">Chairperson</p>
                 </div>
-                <a href="https://wa.me/94717954537" target="_blank"
+                <a href="https://wa.me/94717954537" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                 </a>
@@ -369,7 +380,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Tharushi</h3>
                     <p class="text-gray-600 text-sm mb-4">Co-Chairperson</p>
                 </div>
-                <a href="https://wa.me/94711954203" target="_blank"
+                <a href="https://wa.me/94711954203" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                 </a>
@@ -384,7 +395,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Thishakya</h3>
                     <p class="text-gray-600 text-sm mb-4">Technical Supporter</p>
                 </div>
-                <a href="https://wa.me/94710506202" target="_blank"
+                <a href="https://wa.me/94710506202" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                 </a>
@@ -402,7 +413,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Methma</h3>
                     <p class="text-gray-600 text-sm mb-4">Event Coordinator</p>
                 </div>
-                <a href="https://wa.me/94714281720" target="_blank"
+                <a href="https://wa.me/94714281720" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                 </a>
@@ -417,7 +428,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Atheena</h3>
                     <p class="text-gray-600 text-sm mb-4">Event Coordinator</p>
                 </div>
-                <a href="https://wa.me/94756625494" target="_blank"
+                <a href="https://wa.me/94756625494" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-sm font-semibold hover:from-green-600 hover:to-green-700 transition-all hover:scale-105">
                     <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                 </a>
@@ -434,107 +445,50 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200, once: false });
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        // Countdown Timer with Glass Boxes
+        if (window.AOS) {
+            AOS.init({
+                duration: prefersReducedMotion ? 0 : 1200,
+                once: true,
+                disable: prefersReducedMotion
+            });
+        }
+
+        // Xmasora 2025 is a completed event. Keep the historical dates and
+        // event information visible, but never present expired actions as open.
         const countdown = document.getElementById("countdown");
         const submitButton = document.getElementById("submit-button");
-        const submissionDeadline = new Date("December 17, 2025 23:59:59").getTime();
-        const votingDeadline = new Date("December 24, 2025 23:59:59").getTime();
 
-        const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const submissionDistance = submissionDeadline - now;
-            const votingDistance = votingDeadline - now;
+        if (countdown) {
+            countdown.innerHTML = `
+                <div class="glass-box px-6 py-6" role="status" aria-live="polite">
+                    <p class="text-2xl md:text-3xl font-bold text-white">🎉 Xmasora 2025 has concluded. Thank you to everyone who participated! 🏆</p>
+                </div>
+            `;
+        }
 
-            // Check if submission deadline has passed
-            if (submissionDistance < 0) {
-                // Hide submit button
-                if (submitButton) {
-                    submitButton.style.display = 'none';
-                }
+        if (submitButton) {
+            submitButton.remove();
+        }
 
-                // Check if voting is still ongoing
-                if (votingDistance > 0) {
-                    // Show voting countdown
-                    const days = Math.floor(votingDistance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((votingDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((votingDistance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((votingDistance % (1000 * 60)) / 1000);
-
-                    countdown.innerHTML = `
-                        <p class="text-white text-xl md:text-3xl mb-4 md:mb-6 font-bold tracking-wide glow-text">Voting Phase Deadline</p>
-                        <div class="flex flex-nowrap justify-center gap-2 md:gap-6">
-                            <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                                <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${days}</div>
-                                <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Days</div>
-                            </div>
-                            <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                                <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${hours}</div>
-                                <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Hours</div>
-                            </div>
-                            <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                                <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${minutes}</div>
-                                <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Mins</div>
-                            </div>
-                            <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px] pulse-animation">
-                                <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${seconds}</div>
-                                <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Secs</div>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    // Voting has ended
-                    clearInterval(timer);
-                    countdown.innerHTML = `
-                        <div class="glass-box px-8 py-6 pulse-animation">
-                            <p class="text-2xl md:text-3xl font-bold text-white">🎉 Voting Closed! Results on 25th December! 🏆</p>
-                        </div>
-                    `;
-                }
-            } else {
-                // Show submission countdown
-                const days = Math.floor(submissionDistance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((submissionDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((submissionDistance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((submissionDistance % (1000 * 60)) / 1000);
-
-                countdown.innerHTML = `
-                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${days}</div>
-                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Days</div>
-                    </div>
-                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${hours}</div>
-                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Hours</div>
-                    </div>
-                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px]">
-                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${minutes}</div>
-                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Mins</div>
-                    </div>
-                    <div class="glass-box px-3 py-4 md:px-8 md:py-10 min-w-[70px] md:min-w-[140px] pulse-animation">
-                        <div class="text-2xl md:text-6xl font-extrabold text-white mb-1 md:mb-2">${seconds}</div>
-                        <div class="text-xs md:text-base text-white/80 uppercase tracking-wider">Secs</div>
-                    </div>
-                `;
-            }
-        }, 1000);
-
-        // Enhanced Snowfall effect - 20 on mobile, 40 on desktop
+        // Decorative snowfall is skipped when the visitor requests reduced motion.
         const snowContainer = document.getElementById("snow-container");
-        const isMobile = window.innerWidth < 768;
-        const snowCount = isMobile ? 20 : 40;
+        if (snowContainer && !prefersReducedMotion) {
+            const snowCount = window.innerWidth < 768 ? 12 : 24;
 
-        for (let i = 0; i < snowCount; i++) {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.style.left = Math.random() * 100 + "vw";
-            const duration = 5 + Math.random() * 10;
-            snowflake.style.animationDuration = duration + "s";
-            snowflake.style.animationDelay = -(Math.random() * duration) + "s";
-            snowflake.style.fontSize = 10 + Math.random() * 25 + "px";
-            snowflake.innerHTML = "❄";
-            snowContainer.appendChild(snowflake);
+            for (let i = 0; i < snowCount; i += 1) {
+                const snowflake = document.createElement("span");
+                snowflake.className = "snowflake";
+                snowflake.setAttribute("aria-hidden", "true");
+                snowflake.textContent = "❄";
+                snowflake.style.left = Math.random() * 100 + "vw";
+                const duration = 5 + Math.random() * 10;
+                snowflake.style.animationDuration = duration + "s";
+                snowflake.style.animationDelay = -(Math.random() * duration) + "s";
+                snowflake.style.fontSize = 10 + Math.random() * 25 + "px";
+                snowContainer.appendChild(snowflake);
+            }
         }
     </script>
 </body>
